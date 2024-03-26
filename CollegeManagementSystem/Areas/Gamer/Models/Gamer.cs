@@ -2,7 +2,7 @@
 
 namespace CollegeManagementSystem.Areas.Gamer.Models
 {
-    public class Class
+    public class Gamer
     {
         [Required(ErrorMessage = "Gamer ID is required")]
         [RegularExpression(@"^\d[A-Z]$", ErrorMessage = "Gamer ID must have exactly 2 characters containing 1 digit [0-9] and 1 letter [A-Z]")]

@@ -13,16 +13,14 @@
   <ItemGroup>
     <Folder Include="Areas\Gamer\Controllers\" />
     <Folder Include="Areas\Gamer\Data\" />
-    <Folder Include="Areas\Gamer\Models\" />
     <Folder Include="Areas\Gamer\Views\" />
     <Folder Include="Areas\Staff\Controllers\" />
     <Folder Include="Areas\Staff\Data\" />
-    <Folder Include="Areas\Staff\Models\" />
     <Folder Include="Areas\Staff\Views\" />
     <Folder Include="Areas\Student\Controllers\" />
     <Folder Include="Areas\Student\Data\" />
-    <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Student\Views\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

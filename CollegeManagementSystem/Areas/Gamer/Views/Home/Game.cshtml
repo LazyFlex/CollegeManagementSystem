@@ -1,0 +1,59 @@
+﻿@using CollegeManagementSystem.Models
+@using Microsoft.AspNetCore.Identity
+@model TicTacToeViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Tic Tac Toe";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <a id="manage" class="h3 mb-5" asp-area="Identity" asp-page="/Gamer/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+}
+
+<header class="bg-info text-white p-5 mb-1 mt-3">
+    <h1>Tic Tac Toe</h1>
+</header>
+@if (Model.IsGameOver)
+{
+    <a asp-action="Game"><b>New Game</b></a>
+}
+else
+{
+    <h2 class="mt-2">@Model.Selected.Mark's turn</h2>
+}
+
+<form asp-action="Game" method="post">
+
+    <input type="hidden" asp-for="Selected.Mark" />
+
+    <div class="board-row">
+
+        @foreach (Cell cell in Model.Cells)
+        {
+            @if (cell.IsBlank)
+            {
+                <button type="submit" name="Selected.Id" value="@cell.Id"
+                        class="btn btn-outline-dark">
+                    &nbsp;
+                </button>
+            }
+            else
+            {
+                <button class="btn btn-outline-dark" disabled>@cell.Mark</button>
+            }
+
+            @if (cell.IsEndCell)
+            {
+                <br />
+            }
+        }
+    </div>
+
+</form>
+<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Gamer/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+    <button id="logout" type="submit" class="btn btn-warnin btn-lg">Logout</button>
+</form>
+

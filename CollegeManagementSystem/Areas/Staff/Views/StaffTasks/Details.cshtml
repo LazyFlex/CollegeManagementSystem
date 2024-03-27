@@ -1,0 +1,37 @@
+﻿@model CollegeManagementSystem.Areas.Staff.Models.StaffTask
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Staff/Views/Shared/_StaffLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StaffTask</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaskDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaskLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaskLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TaskStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TaskStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TaskCode">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

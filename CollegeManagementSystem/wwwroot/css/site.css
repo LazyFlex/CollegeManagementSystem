@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.board-row button {
+    height: 5em;
+    width: 5em;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+}

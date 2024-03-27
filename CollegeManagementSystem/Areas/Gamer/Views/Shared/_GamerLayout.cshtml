@@ -6,6 +6,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,7 @@
                             else if (User.IsInRole("Gamer"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Gamer" asp-controller="Home" asp-action="Index">Gamer</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Gamer</a>
                                 </li>
                             }
                         }
@@ -64,12 +65,19 @@
                             </li>
                         }
                     </ul>
+
                 </div>
             </div>
         </nav>
+
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData.Keys.Contains("message"))
+            {
+                <h4 class="bg-success text-white p-3">@TempData["message"]</h4>
+            }
             @RenderBody()
         </main>
     </div>

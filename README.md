@@ -61,7 +61,7 @@ This process ensures that the project is set up correctly on your local machine 
 - CSS
 - JavaScript
 
-### Deployment
+## Deployment
 
 This application is also deployed on Microsoft Azure. You can visit the deployed version of the app [here](https://collegemanagementsystem.azurewebsites.net/)
 

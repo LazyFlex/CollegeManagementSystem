@@ -10,8 +10,8 @@ To install and run this project locally, follow these steps:
 2. Ensure you have [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0) installed on your machine.
 3. Navigate to the project directory using the command line.
 4. Apply database migrations by running `update data-base` in the command line.
-5. Start the application 
-6. Access the application in your web browser 
+5. Start the application.
+6. Access the application in your web browser.
 
 This process ensures that the project is set up correctly on your local machine and is ready to run using .NET 8. If you encounter any issues during the installation process, refer to the project documentation or seek assistance from the project contributor.
 
